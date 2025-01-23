@@ -1,0 +1,6 @@
+CREATE TABLE tb_user(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(20) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    role VARCHAR(20) NOT NULL
+)

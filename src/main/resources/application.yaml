@@ -1,0 +1,22 @@
+server:
+  servlet:
+    context-path: /cgcreative/v1
+  port: 8080
+
+spring:
+  application:
+    name: cgcreative
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    url: ${MYSQL_URL}?allowPublicKeyRetrieval=true&useSSL=false
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    enabled: true
+    url: ${MYSQL_URL}?allowPublicKeyRetrieval=true&useSSL=false
+    user: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
+    locations: classpath:db/migration
